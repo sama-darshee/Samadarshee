@@ -1,0 +1,14 @@
+version: '3'
+services:
+  dbt-bq-dtc:
+    build:
+      context: .
+      target: dbt-bigquery
+    image: dbt/bigquery
+    volumes:
+      - .:/usr/app
+      - ~/.dbt/:/root/.dbt/
+      - ./credens.json:/root/.google/credentials/google_credentials.json  # Corrected path
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/root/.google/credentials/google_credentials.json  # Set env variable
+    network_mode: host
