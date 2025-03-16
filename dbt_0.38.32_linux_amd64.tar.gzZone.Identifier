@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://github.com/dbt-labs/dbt-cli/releases
+HostUrl=https://objects.githubusercontent.com/github-production-release-asset-2e65be/672999998/f5fe7ad3-d22d-4442-9405-da7ebd58da3b?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250316%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250316T192306Z&X-Amz-Expires=300&X-Amz-Signature=1d0b4d298a9078695824684ba6fba514fb9b71b961f044427b5ecda263a68e43&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Ddbt_0.38.32_linux_amd64.tar.gz&response-content-type=application%2Foctet-stream

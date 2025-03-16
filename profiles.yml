@@ -1,0 +1,25 @@
+pg-dbt-workshop:
+  outputs:
+    dev:
+      dbname: production
+      host: localhost
+      keepalives_idle: 0
+      password: my_password
+      port: 5432
+      schema: dbt_victoria_mola
+      threads: 4
+      type: postgres
+      user: my_user
+  target: dev
+sample_proj:
+  outputs:
+    dev:
+      dbname: ny_taxi
+      host: localhost
+      pass: root
+      port: 5432
+      schema: taxi_data_schema
+      threads: 4
+      type: postgres
+      user: root
+  target: dev

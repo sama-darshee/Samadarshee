@@ -1,0 +1,118 @@
+[0m19:23:39.277393 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e6ac6c410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e6a713aa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e6b1ab590>]}
+
+
+============================== 19:23:39.285733 | 33dc2bd4-9feb-4b9d-8d17-0c2af061ea7b ==============================
+[0m19:23:39.285733 [info ] [MainThread]: Running with dbt=1.9.3
+[0m19:23:39.286559 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/data-engineering-zoomcamp/final_proj', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt init', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:24:13.568415 [error] [MainThread]: Encountered an error:
+
+[0m19:24:13.580135 [error] [MainThread]: Traceback (most recent call last):
+  File "/data-engineering-zoomcamp/.venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/data-engineering-zoomcamp/.venv/lib/python3.12/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/data-engineering-zoomcamp/.venv/lib/python3.12/site-packages/dbt/cli/main.py", line 477, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/data-engineering-zoomcamp/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 324, in run
+    project_name = self.get_valid_project_name()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data-engineering-zoomcamp/.venv/lib/python3.12/site-packages/dbt/task/init.py", line 278, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data-engineering-zoomcamp/.venv/lib/python3.12/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/data-engineering-zoomcamp/.venv/lib/python3.12/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m19:24:13.585000 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 31.232656, "process_in_blocks": "10680", "process_kernel_time": 0.248325, "process_mem_max_rss": "88004", "process_out_blocks": "24", "process_user_time": 2.088188}
+[0m19:24:13.587331 [debug] [MainThread]: Command `dbt init` failed at 19:24:13.586654 after 31.24 seconds
+[0m19:24:13.588892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e6ab6f1a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e6b5b48f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4e6a5a9e50>]}
+[0m19:24:13.590207 [debug] [MainThread]: Flushing usage events
+[0m19:28:45.824375 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fddd4832c00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fddd4aecfb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fddd4f6f740>]}
+
+
+============================== 19:28:45.828862 | 69c53c6c-eedf-4afc-87b2-955dca474d6e ==============================
+[0m19:28:45.828862 [info ] [MainThread]: Running with dbt=1.9.3
+[0m19:28:45.829879 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/data-engineering-zoomcamp/final_proj', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt ls', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m19:28:45.830550 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /data-engineering-zoomcamp/final_proj/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m19:28:45.831817 [debug] [MainThread]: Resource report: {"command_name": "list", "command_success": false, "command_wall_clock_time": 0.11873528, "process_in_blocks": "0", "process_kernel_time": 0.122239, "process_mem_max_rss": "87644", "process_out_blocks": "16", "process_user_time": 2.033623}
+[0m19:28:45.832480 [debug] [MainThread]: Command `dbt ls` failed at 19:28:45.832296 after 0.12 seconds
+[0m19:28:45.833409 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fddd4d5fe00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fddd44486e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fddd4995220>]}
+[0m19:28:45.834338 [debug] [MainThread]: Flushing usage events
+[0m19:28:46.997267 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:28:59.257639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f312094edb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f311f403530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3121bfac30>]}
+
+
+============================== 19:28:59.263909 | 59aa5176-6fdf-426c-8a9f-e576b308360e ==============================
+[0m19:28:59.263909 [info ] [MainThread]: Running with dbt=1.9.3
+[0m19:28:59.265008 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/data-engineering-zoomcamp/final_proj', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt list', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:28:59.265940 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /data-engineering-zoomcamp/final_proj/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m19:28:59.267435 [debug] [MainThread]: Resource report: {"command_name": "list", "command_success": false, "command_wall_clock_time": 0.116528854, "process_in_blocks": "0", "process_kernel_time": 0.211457, "process_mem_max_rss": "87652", "process_out_blocks": "8", "process_user_time": 1.936502}
+[0m19:28:59.268191 [debug] [MainThread]: Command `dbt list` failed at 19:28:59.267994 after 0.12 seconds
+[0m19:28:59.268806 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f311f0f5820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f311f403530>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f311f399970>]}
+[0m19:28:59.269453 [debug] [MainThread]: Flushing usage events
+[0m19:29:01.598529 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:29:09.915110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7256d85670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7257191dc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7257193140>]}
+
+
+============================== 19:29:09.919043 | a9480d87-97c1-4e2a-9485-870478d4a180 ==============================
+[0m19:29:09.919043 [info ] [MainThread]: Running with dbt=1.9.3
+[0m19:29:09.919938 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/data-engineering-zoomcamp/final_proj', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt init', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:29:14.149879 [debug] [MainThread]: Starter project path: /data-engineering-zoomcamp/.venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m19:29:14.160262 [info ] [MainThread]: 
+Your new dbt project "sample_proj" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m19:29:14.161681 [info ] [MainThread]: Setting up your profile.
+[0m19:29:53.095296 [info ] [MainThread]: Profile sample_proj written to /data-engineering-zoomcamp/final_proj/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m19:29:53.097616 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 40.011215, "process_in_blocks": "9472", "process_kernel_time": 0.18971, "process_mem_max_rss": "93596", "process_out_blocks": "80", "process_user_time": 2.099978}
+[0m19:29:53.098420 [debug] [MainThread]: Command `dbt init` succeeded at 19:29:53.098243 after 40.01 seconds
+[0m19:29:53.099091 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7257441f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f72587124b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7256bbaa50>]}
+[0m19:29:53.099733 [debug] [MainThread]: Flushing usage events
+[0m19:29:54.283599 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:30:01.786765 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f93371142c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9338906570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f93378c7f50>]}
+
+
+============================== 19:30:01.791136 | 71d6b13d-9e35-46c0-996d-a0560fd70c3c ==============================
+[0m19:30:01.791136 [info ] [MainThread]: Running with dbt=1.9.3
+[0m19:30:01.792012 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': '/data-engineering-zoomcamp/final_proj', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m19:30:01.804240 [info ] [MainThread]: dbt version: 1.9.3
+[0m19:30:01.805145 [info ] [MainThread]: python version: 3.12.3
+[0m19:30:01.805753 [info ] [MainThread]: python path: /data-engineering-zoomcamp/.venv/bin/python
+[0m19:30:01.806352 [info ] [MainThread]: os info: Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m19:30:01.902191 [info ] [MainThread]: Using profiles dir at /data-engineering-zoomcamp/final_proj
+[0m19:30:01.903136 [info ] [MainThread]: Using profiles.yml file at /data-engineering-zoomcamp/final_proj/profiles.yml
+[0m19:30:01.903794 [info ] [MainThread]: Using dbt_project.yml file at /data-engineering-zoomcamp/final_proj/dbt_project.yml
+[0m19:30:01.904691 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m19:30:01.906467 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.23004253, "process_in_blocks": "0", "process_kernel_time": 0.144542, "process_mem_max_rss": "92412", "process_out_blocks": "16", "process_user_time": 2.068065}
+[0m19:30:01.907221 [debug] [MainThread]: Command `dbt debug` failed at 19:30:01.907026 after 0.23 seconds
+[0m19:30:01.907930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9336c0c170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f933689e6f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9336e586b0>]}
+[0m19:30:01.908794 [debug] [MainThread]: Flushing usage events
+[0m19:30:03.260119 [debug] [MainThread]: An error was encountered while trying to flush usage events
