@@ -1,3 +1,5 @@
+version: '3.8'
+
 volumes:
   postgres-data:
     driver: local
@@ -6,13 +8,13 @@ volumes:
 
 services:
   postgres:
-    image: postgres:latest
+    image: postgres:13
     environment:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
       - POSTGRES_DB=ny_taxi
     volumes:
-      - "./ny_taxi_postgres_data:/var/lib/postgresql/data:rw"
+      - postgres-data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     healthcheck:
@@ -23,6 +25,7 @@ services:
 
   kestra:
     image: kestra/kestra:latest
+    pull_policy: always
     user: "root"  # For dev purposes; see Kestra docs for production rootless setup
     command: server standalone
     volumes:
